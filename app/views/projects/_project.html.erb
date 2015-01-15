@@ -2,7 +2,14 @@
   <div class="time leftColumn <%= project.finished_at.nil? ? "changes" : "" %>"><%= project.time %></div>
   <div class="info rightColumn">
     <h2><a href='http://goo.gl/klswWF'><%= project.title %></a></h2>
-    <p><%= raw project.credit %> | <a class="online" href="http://goo.gl/klswWF"><span class="<%= project.status %>"><%= project.status %></span></a></p>        
+    <p>
+      <%= raw project.credit %> | 
+      <% if project.url %>
+        <a class="online" href="http://goo.gl/klswWF"><span class="<%= project.status %>"><%= project.status %></span></a>
+      <% else %>
+        <span class="<%= project.status %>"><%= project.status %></span>
+      <% end %>
+    </p>        
   </div>
   <div class="clear"></div>
 </div>
