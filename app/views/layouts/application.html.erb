@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guille Lopez — full-stack developer and designer</title>
+  <meta name='description' content='Full-stack developer and designer from Barcelona working in San Francisco.' />
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+<%= render "layouts/analytics" %>
+
+</body>
+</html>

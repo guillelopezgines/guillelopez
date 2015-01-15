@@ -1,0 +1,8 @@
+<div class="project">
+  <div class="time leftColumn <%= project.finished_at.nil? ? "changes" : "" %>"><%= project.time %></div>
+  <div class="info rightColumn">
+    <h2><a href='http://goo.gl/klswWF'><%= project.title %></a></h2>
+    <p><%= raw project.credit %> | <a class="online" href="http://goo.gl/klswWF"><span class="<%= project.status %>"><%= project.status %></span></a></p>        
+  </div>
+  <div class="clear"></div>
+</div>

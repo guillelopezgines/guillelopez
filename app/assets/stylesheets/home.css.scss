@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+    color: #fff;
+   font-family:'Droid Sans', lucida grande, lucida sans unicode, Georgia, Arial, Verdana;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9em;
+}
+
+
+#page {
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+  width: 900px;
+}
+
+#header{
+    padding: 15px 0 0px;
+}
+
+#content{
+
+}
+
+#footer{
+    padding: 10px 0 20px;
+    float: left;
+  width: 375px;
+  text-align: left;
+  margin-left: 402px;
+  font-size: .9em;
+  font-weight: normal;
+}
+
+h1{
+    font-size:5em;
+  color: #00E811;
+  text-align: right;
+}
+
+.bigger{
+  font-size: 1.3em;
+}
+
+.description{
+  margin-top: 20px;
+  width: 400px;
+    font-size: .9em;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  font-weight: 100;
+}
+
+.project{
+}
+
+.leftColumn{
+  float: left;
+  width: 375px;
+  text-align: right;
+}
+
+.time{
+  font-size: 3.9em;
+  letter-spacing: 0.05em;
+}
+
+.rightColumn{
+  float: left;
+  text-align: left;
+  margin-left: 25px;
+}
+
+.info{
+  margin-top: 8px;
+  width: 500px;
+}
+
+h2{
+  font-size: 2em;
+  letter-spacing: 0.05em;
+  cursor: default;
+}
+
+h2 a{
+  border: 0 !important;
+}
+
+.info p{
+    font-size: .9em;
+  font-weight: 100;
+  margin-left: 1px;
+  margin-top: -1px;
+}
+
+a{
+  text-decoration:none;
+  color:#00E811;
+}
+
+a:hover{
+  text-decoration:none;
+  border-bottom: 2px solid;
+  padding-bottom: 1px;
+}
+
+.info a{
+  text-decoration:none;
+  color:#ffffff;
+}
+
+.info a:hover{
+  text-decoration:none;
+  border-bottom: 2px solid;
+  padding-bottom: 1px;
+}
+
+.working{
+  color: #0095FF;
+}
+
+.finished{
+  color: #C4320D;
+}
+
+.beta, a.beta{
+  color: #0095FF;
+}
+
+
+.secret{
+  color: #EABE05;
+}
+
+.online, a.online{
+  color: #00E811;
+}
+
+.documentation{
+  color: #00E811;
+}
+
+.clear{
+clear: both;
+}
