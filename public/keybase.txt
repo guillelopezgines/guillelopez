@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/guillelopez
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.guillelopez.com
+  * I am guillelopez (https://keybase.io/guillelopez) on keybase.
+  * I have a public key with fingerprint 623F 85B2 0911 4DAA 71CB  5CC3 5C5A 8C97 D7F7 C13D
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "623f85b209114daa71cb5cc35c5a8c97d7f7c13d",
+            "host": "keybase.io",
+            "key_id": "5c5a8c97d7f7c13d",
+            "kid": "0101edbe54fc6e027944645d98925e624d4adfdeae59db2b82948dd15e29743984770a",
+            "uid": "fa7a2f81170284c67dcf0b3858397800",
+            "username": "guillelopez"
+        },
+        "revoke": {
+            "sig_ids": [
+                "4ac0f7e06dc0c8a2318b40b37865b297d4e2cb89bcb642499ddac6d27310c9b10f"
+            ]
+        },
+        "service": {
+            "hostname": "www.guillelopez.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1421353768,
+    "expire_in": 157680000,
+    "prev": "36ba751878805227267fec9a0d413f25f3dfad655957eaba62c5a709f22cb129",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.1
+Comment: https://keybase.io/crypto
+
+yMJuAnicbZJtaJZVGMefqQsdCUkvIhTqSTToYZxz7nPuc87jJE37kDaWWgaz+XDe
+7md32+772fOyF3X4odUkMHBhNRq5CRKUFPVF28BsWSG+gRBNTdLMWlt+2SCzBnru
+B4M+eL4cznX+1+/6X9c5JxfOTdVU/di8n/WuPvBV1emvPyqnXjr25FO7gIpNN8js
+Ai22sgVhlLOFfCGMSiADfOwFnCoMBULESMmQVlRrj2oquRbMsIBp5BmQBs1xMclw
+GCWLtjaMXcwdsqFx0fvoWyoXEEFkjbKUBNq3EDNBiE+oEVxgan1MDJEmMFZaKozC
+imNBuDGIWiwY8QQnjEHpcOUKLpBM4oAjxCDmRPvM6AAqj1PuCcYhTIRFW4hkm3Xq
+XDlsbbWtcd7uBD1pULAdcYtNhlAMc853EWS2AyI1DJiFvtFQc4k9xBVxSMZ9NxfX
+EbFYKy6UVj7BRAhjpPYNZh6CWigEA9Dk2K5oR6gr8GRQ9wx0dnbW/s9ErY7bnMN8
+IS7FOm51guZSKV/MJOZK3flKhlXZe6ysCiPjXstldNhCMYwjkEFOqUthAkcEI496
+zOdpYLvyYcFmw0RBXQS6ldSxHQ7p+UoyijjjHFKMGfZZYLWQ0BDkBZgGngmk8SkV
+lFmppI/dYzIoAuwaR1iApLv2KAYZ4WzKnEO6+UWyVC5Y0DN24tV5qaqa1APVc5L/
+lqpZ8NB/v3BsYn6qv27F/hdXftEVrfj159LkhdF3c8vSvXurNuenLk2S2w8vXTfV
+Pp29EzVvHGkcnImenmn4M7O57uqBtb90P7v+5tSMeGvr+N6eTz9/58FPGqPzK5cO
+Nn03OLTqiTcWH5qdyD+z/g9/qH7Tx319czY1ddVtGLq5Zvm28pIXPviw3zv45p5F
+i68cNrdvjD8++sOjn2WHHwM7r/9eLv90euP5f061TR/5a/KRrUuef23Rvvffbuzd
+fryn4Wzf8IktTWjV+Ow3r/x2+VbDwGh19Ddm8Uj6320Xzh67Ur3vYsCO7xhZnVrQ
+2F/fPpCef3nP7uLrat0AO1evBuzY9K0jG65fe+/oy0cPzn75/ZnstxPP3bgLpJpN
+ww==
+=vDjw
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/guillelopez
+
+==================================================================
