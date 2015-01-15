@@ -4,7 +4,6 @@ xml.instruct! :xml, :version => "1.0"
 xml.rss :version => "2.0" do
   xml.channel do
     xml.title "Guille Lopez"
-    xml.author "Guille Lopez"
     xml.description "Full-stack developer and designer from Barcelona working in San Francisco."
     xml.link "http://www.guillelopez.com"
     xml.language "en"
