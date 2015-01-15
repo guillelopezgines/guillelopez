@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
+ruby '2.1.1'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
 # Use mysql as the database for Active Record
@@ -27,7 +27,5 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
+# for running rails 4 on heroku
+gem 'rails_12factor', group: :production
