@@ -1,4 +1,7 @@
 class Project < ActiveRecord::Base
+  
+  default_scope order('started_at DESC')
+  
   def time
     start_date_time = started_at
     end_date_time = finished_at.nil? ? Time.now() : finished_at
