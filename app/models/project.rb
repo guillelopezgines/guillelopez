@@ -12,6 +12,6 @@ class Project < ActiveRecord::Base
     inc_date_time = inc_date_time % (60*60)
     minutes = (inc_date_time / 60).floor
     seconds = (inc_date_time % 60).floor
-    days.to_s.rjust(2, '0') + ':' + hours.to_s.rjust(2, '0') + ':' + minutes.to_s.rjust(2, '0') + ':'+ seconds.to_s.rjust(2, '0')
+    days.to_s + ':' + hours.to_s.rjust(2, '0') + ':' + minutes.to_s.rjust(2, '0') + ':'+ seconds.to_s.rjust(2, '0')
   end
 end
