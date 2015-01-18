@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.order('started_at DESC')
   end
   def feed
-    @projects = Project.all
+    @projects = Project.where("finished_at IS NOT NULL").order('finished_at DESC')
     respond_to do |format|
       format.rss { render :layout => false }
     end
