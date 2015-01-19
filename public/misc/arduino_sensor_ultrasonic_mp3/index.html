@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Dúctil - Arduino + Sensor + MP3</title>	
+	<meta name='robots' content='index,follow' />
+	<meta name='Description' content="Arduino + Sensor + MP3." />
+	<meta name='abstract' content="Arduino + Sensor + MP3." />
+	<meta name='author' content='Dúctil' />
+	<meta http-equiv='content-language' content='en-us' />
+	<meta name='revisit-after' content='15 Day' />
+	<link href='http://feeds.feedburner.com/ductil' rel='alternate' type='application/rss+xml' title='Ductil News' />	
+	<link rel='stylesheet' href='css/estilo.css' type='text/css' />
+</head>
+<body>              
+
+<div id="contenedor">
+<div align="center" style="padding: 10px;">
+<h1>Arduino + Ultrasonic sensor + MP3</h1>
+
+<p class='description'>In this project for <a href='http://www.guixe.com' target='_blank' class='georgia14'>Mart&iacute; Guix&eacute;</a> we built a small autonomous device with <a href='http://www.arduino.cc/' target='_blank'  class='georgia14'>Arduino</a> that can detect the presence of people with an <a href='http://www.kemo-electronic.com/en/bausaetze/b214/index.htm' target='_blank'  class='georgia14'>ultrasonic sensor</a>. It then proceeds to play an MP3 song with a <a href='http://www.jelu.se/shop/product_info.php?products_id=38' target='_blank'  class='georgia14'>Yampp Industrial III</a>.</p>
+
+<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/ur91CeCJdEw"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/ur91CeCJdEw" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object>
+
+<br><br>
+<img src='contenido/yamp_arduino_sensor_ultrasonic.jpg' width='500px' height='392px'/><br>
+<img src='contenido/arduino_yampp_ultrasonic_sensor_scheme.png' width='695px' height='573px'/>
+
+<h2 align='left'>Arduino Code:</h2>
+<p class='code' align='left'>
+int val = 0;<br>
+int ledPin = 13;<br>
+int active = 0;<br>
+<br>
+
+<br>
+void setup(){<br>
+&nbsp;Serial.begin(19200);<br>
+&nbsp;pinMode(ledPin, OUTPUT);<br>
+}<br>
+<br>
+void loop(){<br>
+ &nbsp;val = analogRead(0);<br>
+&nbsp;if(val>200)<br>
+
+&nbsp;{  <br>
+&nbsp;&nbsp;if(active==0)<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Serial.print (1, BYTE);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(ledPin, HIGH);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;delay(3000);        <br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;active = 1;<br>
+&nbsp;}else{<br>
+
+&nbsp;&nbsp;active = 0;<br>
+&nbsp;&nbsp;digitalWrite(ledPin, LOW);<br>
+&nbsp;&nbsp;delay(100);<br>
+&nbsp;}<br>
+ <br>
+}
+</p>
+<br>
+<img src='contenido/ultrasonic_sensor.jpg' width='200px' height="267px"/>
+<img src='contenido/arduino_box.jpg' width='200px' height="267px"/><br>
+<img src='contenido/pack.jpg' width='200px' height="267px"/>
+<img src='contenido/pack2.jpg' width='200px' height="267px"/>
+
+</div>
+     
+</div>   
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22323312-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
