@@ -34,12 +34,12 @@
       <div>
         <div class="theme-settings-form" refresh="theme_settings_html" id="theme_settings_html">
           <h2 class="heading section-expanded" data-heading="0">California Theme Settings</h2>
-<fieldset>
+<fieldset class="">
   
   <p>Theme settings allow you to customize the look and feel of the California Theme without having to delve into HTML or CSS code.</p>
   <p>If you require any support for California Theme, please review the <a href="http://california-theme-generic.myshopify.com/pages/documentation" target="_blank">documentation</a> or contact us at <a href="mailto:california.theme@gmail.com">california.theme@gmail.com</a>.</p>
   <p>For updates and tips please follow us on Twitter: <a href="https://www.twitter.com/californiatheme" target="_blank">@californiatheme</a>.</p>
-  <p><small>You are using version 1.6 of the theme.</small></p>
+  <p><small>You are using version 2.0 of the theme.</small></p>
 </fieldset>
 <h2 class="heading section-expanded" data-heading="1">General</h2>
 <fieldset class="">
@@ -105,19 +105,42 @@
       </td>
     </tr>
     <tr>
-                    <td colspan="2">
-                      <h3 class="heading">Favicon</h3>
-                    </td>
-                  </tr>
-                  <tr>
-                <td><label for="favicon">Options</label></td>
-                <td>
-                  <select name="favicon">
-                    <option value="default">Use Browser Default Favicon Image</option>
-                    <option value="custom">Use Custom Favicon Image</option>
-                  </select>
-                </td>
-              </tr>
+      <td colspan="2">
+        <h3 class="heading">Favicon</h3>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="favicon">Options</label></td>
+      <td>
+        <select name="theme_settings[current_values][favicon]">
+          <option value="default" selected="">Use Browser Default Favicon Image</option>
+          <option value="custom">Use Custom Favicon Image</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="favicon_image">Custom Favicon Image</label>
+        <small>Maximum image size: 32x32 pixels.</small><br>
+        <small>Inspiration: <a href="http://www.smashingmagazine.com/2007/01/31/inspire-yourself-50-remarkable-favicons/" target="_blank">50 Remarkable Favicons</a></small>
+      </th>
+      <td>
+<input type="file" name="theme_settings[current_values][favicon.png]" id="favicon_image" data-max-width="32" data-max-height="32">
+<p>
+  <i class="ico ico-16 ico-uploaded-file"></i>
+  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/favicon.png?16728914975433133305" target="_blank" bind-event-click="previewfaviconpng.show()">favicon.png</a>
+</p>
+
+<script class="modal_source" define="{previewfaviconpng: new Shopify.Modal(this)}" type="text/html">
+  <div class="body clearfix">
+    <img alt="Favicon" class="modal-image" src="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/favicon.png?16728914975433133305" title="favicon.png" />
+  </div>
+  <div class="buttons">
+    <a class="btn close-modal" href="#">Done</a>
+  </div>
+</script>
+</td>
+    </tr>
   </tbody></table>
 </fieldset>
 <h2 class="heading section-expanded" data-heading="2">Home Page Hero</h2>
@@ -125,6 +148,30 @@
   
   <table>
     <tbody><tr>
+      <td colspan="2">
+        <h3 class="heading">Layout</h3>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="hero_height">Hero Height (% of the screen to cover)</label>
+        <small>Be aware, that depending on the content you are having on the hero there will be cases that the height might be higher than the one you choose here.</small>
+      </td>
+      <td>
+        <select name="theme_settings[current_values][hero_height]">
+          <option value="100%" selected="">100%</option>
+          <option value="90%">90%</option>
+          <option value="80%">80%</option>
+          <option value="70%">70%</option>
+          <option value="60%">60%</option>
+          <option value="50%">50%</option>
+          <option value="40%">40%</option>
+          <option value="30%">30%</option>
+          <option value="20%">20%</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
       <td colspan="2">
         <h3 class="heading">Logo</h3>
         <small>Please, be aware this section just changes the logo showing at the home page. For changing the logo at the header of the page, go to the Header section.</small>
@@ -156,9 +203,17 @@
 <input type="file" name="theme_settings[current_values][logo.png]" id="hero_logo_image" data-max-width="1200" data-max-height="500">
 <p>
   <i class="ico ico-16 ico-uploaded-file"></i>
-  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/logo.png?15467" target="_blank" bind-event-click="previewlogopng.show()">logo.png</a>
+  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/logo.png?16728914975433133305" target="_blank" bind-event-click="previewlogopng.show()">logo.png</a>
 </p>
 
+<script class="modal_source" define="{previewlogopng: new Shopify.Modal(this)}" type="text/html">
+  <div class="body clearfix">
+    <img alt="Logo" class="modal-image" src="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/logo.png?16728914975433133305" title="logo.png" />
+  </div>
+  <div class="buttons">
+    <a class="btn close-modal" href="#">Done</a>
+  </div>
+</script>
 </td>
     </tr>
     <tr>
@@ -172,10 +227,10 @@
       </td>
     </tr>
     <tr>
-          <td colspan="2">
-            <h3 class="heading">Line</h3>
-          </td>
-        </tr>
+      <td colspan="2">
+        <h3 class="heading">Line</h3>
+      </td>
+    </tr>
     <tr>
       <th><label for="hero_hide_line">Hide line between logo and tagline</label></th>
       <td colspan="2">
@@ -184,28 +239,54 @@
     </tr>
     <tr>
       <td colspan="2">
-        <h3 class="heading">Text</h3>
-        <p>Edit the text in the <a href="https://california-theme-generic.myshopify.com/admin/themes/11467879/languages/edit?category=home_page&mp;key=en.default">English Language Home Page Category</a>.</p>
-        <p>For stores in Spanish, first set Spanish as default language and then edit the <a href="https://california-theme-generic.myshopify.com/admin/themes/11467879/languages/edit?category=home_page&mp;key=es">Spanish Language Home Page Category</a>.</p>
+        <h3 class="heading">Tagline</h3>
+        <p>Edit the text with the <a href="languages/edit?category=home_page&amp;mp;key=en.default">Edit Language</a> option.</p>
       </td>
     </tr>
     <tr>
-      <th><label for="hero_show_tagline_on_mobile">Show tagline text on mobile</label></th>
+      <th>
+        <label for="hero_show_tagline_on_mobile">Show tagline text on mobile</label>
+        <small>By default the tagline is hidden on mobile</small>
+      </th>
       <td colspan="2">
-        <input type="hidden" name="theme_settings[current_values][hero_show_tagline_on_mobile]" value="0"><input type="checkbox" id="hero_show_tagline_on_mobile" name="theme_settings[current_values][hero_show_tagline_on_mobile]" value="1">
+<input type="hidden" name="theme_settings[current_values][hero_show_tagline_on_mobile]" value="0"><input type="checkbox" id="hero_show_tagline_on_mobile" name="theme_settings[current_values][hero_show_tagline_on_mobile]" value="1">
+</td>
+    </tr>
+        <tr>
+      <th><label for="hero_hide_tagline">Always hide tagline</label></th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][hero_hide_tagline]" value="0"><input type="checkbox" id="hero_hide_tagline" name="theme_settings[current_values][hero_hide_tagline]" value="1">
+</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <h3 class="heading">Buttons</h3>
       </td>
     </tr>
     <tr>
-                    <td colspan="2">
-                      <h3 class="heading">Links</h3>
-                    </td>
-                  </tr>
-                  <tr>
-                <th><label for="hero_button_to_store_url">Hero Button To Store Link</label></th>
-                <td>
-                  <input type="text" id="hero_button_to_store_url" name="hero_button_to_store_url" size="50" value="/collections/all">
-                </td>
-              </tr>
+      <th><label for="hero_button_to_store_url">Hero Button To Store Link</label></th>
+      <td>
+        <input type="text" id="hero_button_to_store_url" name="theme_settings[current_values][hero_button_to_store_url]" size="50" value="/collections">
+      </td>
+    </tr>
+    <tr>
+      <th><label for="hero_hide_button_to_store">Hide Hero Button To Store</label></th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][hero_hide_button_to_store]" value="0"><input type="checkbox" id="hero_hide_button_to_store" name="theme_settings[current_values][hero_hide_button_to_store]" value="1">
+</td>
+    </tr>
+    <tr>
+      <th><label for="hero_hide_button_to_scroll">Hide Hero Button To Scroll Down The Page</label></th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][hero_hide_button_to_scroll]" value="0"><input type="checkbox" id="hero_hide_button_to_scroll" name="theme_settings[current_values][hero_hide_button_to_scroll]" value="1">
+</td>
+    </tr>
+    <tr>
+      <th><label for="hero_hide_arrow">Hide Hero Bottom Right Arrow</label></th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][hero_hide_arrow]" value="0"><input type="checkbox" id="hero_hide_arrow" name="theme_settings[current_values][hero_hide_arrow]" value="1">
+</td>
+    </tr>
     <tr>
       <td colspan="2">
         <h3 class="heading">Background</h3>
@@ -231,32 +312,33 @@
     <tr>
       <th>
         <label for="hero_background_image">Custom Background Image</label>
+        <small>Recommended: jpg, between 500 KB and 1 MB. If you are looking for free stock images, check <a href="http://www.shopify.com/blog/17156388-22-awesome-websites-with-stunning-free-stock-images" target="_blank">this blog post</a>.</small>
       </th>
-      <td><input type="file" name="theme_settings[current_values][hero-background.png]" id="hero_background_image"></td>
+      <td><input type="file" name="theme_settings[current_values][hero-background.jpg]" id="hero_background_image"></td>
     </tr>
     <tr>
-          <th>
-            <label for="hero_background_position">Custom Background Image Position</label>
-            <small>Horizontall and vertical positioning of the Background Image</small>
-          </th>
-          <td>
-            <select name="theme_settings[current_values][hero_background_position]">
-              <option value="center center" selected="">center center</option>
-              <option value="center top">center top</option>
-              <option value="center 25%">center 25%</option>
-              <option value="center 75%">center 75%</option>
-              <option value="center bottom">center bottom</option>
-              <option value="left center">left center</option>
-              <option value="25% center">25% center</option>
-              <option value="75% center">75% center</option>
-              <option value="right center">right center</option>
-              <option value="left top">left top</option>
-              <option value="right top">right top</option>
-              <option value="left bottom">left bottom</option>
-              <option value="right bottom">right bottom</option>
-            </select>
-          </td>
-        </tr>
+      <th>
+        <label for="hero_background_position">Custom Background Image Position</label>
+        <small>Horizontall and vertical positioning of the Background Image</small>
+      </th>
+      <td>
+        <select name="theme_settings[current_values][hero_background_position]">
+          <option value="center center" selected="">center center</option>
+          <option value="center top">center top</option>
+          <option value="center 25%">center 25%</option>
+          <option value="center 75%">center 75%</option>
+          <option value="center bottom">center bottom</option>
+          <option value="left center">left center</option>
+          <option value="25% center">25% center</option>
+          <option value="75% center">75% center</option>
+          <option value="right center">right center</option>
+          <option value="left top">left top</option>
+          <option value="right top">right top</option>
+          <option value="left bottom">left bottom</option>
+          <option value="right bottom">right bottom</option>
+        </select>
+      </td>
+    </tr>
     <tr>
       <th>
         <label for="color_hero_bg_overlay">Custom Background Image Overlay Color</label>
@@ -391,26 +473,57 @@
       </td>
     </tr>
     <tr>
+      <th><label for="hero_hide_paragraphs_mobile">Hide pitch paragraphs on mobile</label></th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][hero_hide_paragraphs_mobile]" value="0"><input type="checkbox" id="hero_hide_paragraphs_mobile" name="theme_settings[current_values][hero_hide_paragraphs_mobile]" value="1" checked="">
+</td>
+    </tr>
+    <tr>
       <td colspan="2">
         <h3 class="heading">Text</h3>
-        <p>Edit the text in the <a href="https://california-theme-generic.myshopify.com/admin/themes/11467879/languages/edit?category=home_page&mp;key=en.default">English Language Home Page Category</a>.</p>
-        <p>For stores in Spanish, first set Spanish as default language and then edit the <a href="https://california-theme-generic.myshopify.com/admin/themes/11467879/languages/edit?category=home_page&mp;key=es">Spanish Language Home Page Category</a>.</p>
+        <p>Edit the text in the <a href="languages/edit?category=home_page&amp;mp;key=en.default">English Language Home Page Category</a>.</p>
+        <p>For stores in Spanish, first set Spanish as default language and then edit the <a href="languages/edit?category=home_page&amp;mp;key=es">Spanish Language Home Page Category</a>.</p>
       </td>
     </tr>
     <tr>
-                    <td colspan="2">
-                      <h3 class="heading">Links</h3>
-                    </td>
-                  </tr>
-                  <tr>
-                <th>
-                  <label for="home_pitch_button_to_store_url">Pitch Button To Store Link</label>
-                  <small>Alert: if the home page is showing a preview collection this button doesn't show.</small>
-                </th>
-                <td>
-                  <input type="text" id="home_pitch_button_to_store_url" name="home_pitch_button_to_store_url" size="50" value="/collections/all">
-                </td>
-              </tr>
+      <td colspan="2">
+        <h3 class="heading">Links</h3>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="home_pitch_button_to_store_url">Pitch Button To Store Link</label>
+        <small>Alert: if the home page is showing a preview collection this button doesn't show.</small>
+      </th>
+      <td>
+        <input type="text" id="home_pitch_button_to_store_url" name="theme_settings[current_values][home_pitch_button_to_store_url]" size="50" value="/collections/all">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <h3 class="heading">Colors</h3>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="color_pitch_number_fade">Pitch Numbers</label>
+        <small>Please adjust the level of fade so the numbers show properly on the screen.</small>
+      </th>
+      <td>
+        <select name="theme_settings[current_values][color_pitch_number_fade]">
+          <option value="0">Fade 0%</option>
+          <option value="10">Fade 10%</option>
+          <option value="20">Fade 20%</option>
+          <option value="30" selected="">Fade 30%</option>
+          <option value="40">Fade 40%</option>
+          <option value="50">Fade 50%</option>
+          <option value="60">Fade 60%</option>
+          <option value="70">Fade 70%</option>
+          <option value="80">Fade 80%</option>
+          <option value="90">Fade 90%</option>
+        </select>
+      </td>
+    </tr>
   </tbody></table>
 </fieldset>
 <h2 class="heading section-expanded" data-heading="4">Home Page Preview Collection</h2>
@@ -434,12 +547,12 @@
     <tr>
       <th><label for="home_collection_collection">Collection</label></th>
       <td colspan="2">
-<div define="{&#39;home_collection_collectionresourcePicker&#39;: new Shopify.SingleSelectResourcePicker(this, &#39;theme_settings[current_values][home_collection_collection]&#39;)}" context="home_collection_collectionresourcePicker">
+<div define="{'home_collection_collectionresourcePicker': new Shopify.SingleSelectResourcePicker(this, 'theme_settings[current_values][home_collection_collection]')}" context="home_collection_collectionresourcePicker">
   <div class="dropdown-container" id="home_collection_collection_partial_container">
-    <a define="{resourceDropdown: new Shopify.ResourceDropdown(this, &#39;home_collection_collection_partial_container&#39;)}" href="https://california-theme-generic.myshopify.com/admin/collections/dropdown?resource_attribute=handle&resource_key=home_collection_collection&single_select=true" style="display: none" type="text/html"></a>
-    <a href="https://california-theme-generic.myshopify.com/admin/themes/11467879/settings#" class="btn slim" data-dropdown="~ .dropdown" bind-event-click="resourceDropdown.renderDropdown(event)"><span class="resource-picker-title">Apparel</span> <i class="ico ico-16x8 ico-disclosure"></i></a>
+    <a define="{resourceDropdown: new Shopify.ResourceDropdown(this, 'home_collection_collection_partial_container')}" href="/admin/collections/dropdown?resource_attribute=handle&amp;resource_key=home_collection_collection&amp;single_select=true" style="display: none" type="text/html"></a>
+    <a href="#" class="btn slim" data-dropdown="~ .dropdown" bind-event-click="resourceDropdown.renderDropdown(event)"><span class="resource-picker-title">Apparel</span> <i class="ico ico-16x8 ico-disclosure"></i></a>
   </div>
-  <a bind-event-click="clearSelection(&#39;None&#39;)" class="btn btn-slim clear-search-selection tooltip tooltip-bottom" href="https://california-theme-generic.myshopify.com/admin/themes/11467879/settings#">
+  <a bind-event-click="clearSelection('None')" class="btn btn-slim clear-search-selection tooltip tooltip-bottom" href="#">
     <span class="tooltip-container">
       <span class="tooltip-label">Clear selection</span>
     </span>
@@ -475,21 +588,21 @@
     <tr>
       <td colspan="2">
         <h3 class="heading">Title Text</h3>
-        <p>Edit the title text in the <a href="https://california-theme-generic.myshopify.com/admin/themes/11467879/languages/edit?category=home_page&mp;key=en.default">English Language Home Page Category</a>.</p>
-        <p>For stores in Spanish, first set Spanish as default language and then edit the <a href="https://california-theme-generic.myshopify.com/admin/themes/11467879/languages/edit?category=home_page&mp;key=es">Spanish Language Home Page Category</a>.</p>
+        <p>Edit the title text in the <a href="languages/edit?category=home_page&amp;mp;key=en.default">English Language Home Page Category</a>.</p>
+        <p>For stores in Spanish, first set Spanish as default language and then edit the <a href="languages/edit?category=home_page&amp;mp;key=es">Spanish Language Home Page Category</a>.</p>
       </td>
     </tr>
     <tr>
-                <td colspan="2">
-                  <h3 class="heading">Links</h3>
-                </td>
-              </tr>
-              <tr>
-                <th><label for="home_collection_button_to_store_url">Collection Button To Store Link</label></th>
-                <td>
-                  <input type="text" id="home_collection_button_to_store_url" name="home_collection_button_to_store_url" size="50" value="/collections/all">
-                </td>
-              </tr>
+      <td colspan="2">
+        <h3 class="heading">Links</h3>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="home_collection_button_to_store_url">Collection Button To Store Link</label></th>
+      <td>
+        <input type="text" id="home_collection_button_to_store_url" name="theme_settings[current_values][home_collection_button_to_store_url]" size="50" value="/collections/all">
+      </td>
+    </tr>
   </tbody></table>
 </fieldset>
 <h2 class="heading section-expanded" data-heading="5">Home Page Preview Articles</h2>
@@ -513,12 +626,12 @@
     <tr>
       <td><label for="home_articles_blog">Blog</label></td>
       <td>
-        <div define="{&#39;home_articles_blogresourcePicker&#39;: new Shopify.SingleSelectResourcePicker(this, &#39;theme_settings[current_values][home_articles_blog]&#39;)}" context="home_articles_blogresourcePicker">
+        <div define="{'home_articles_blogresourcePicker': new Shopify.SingleSelectResourcePicker(this, 'theme_settings[current_values][home_articles_blog]')}" context="home_articles_blogresourcePicker">
   <div class="dropdown-container" id="home_articles_blog_partial_container">
-    <a define="{resourceDropdown: new Shopify.ResourceDropdown(this, &#39;home_articles_blog_partial_container&#39;)}" href="https://california-theme-generic.myshopify.com/admin/blogs/dropdown?resource_attribute=handle&resource_key=home_articles_blog&single_select=true" style="display: none" type="text/html"></a>
-    <a href="https://california-theme-generic.myshopify.com/admin/themes/11467879/settings#" class="btn slim" data-dropdown="~ .dropdown" bind-event-click="resourceDropdown.renderDropdown(event)"><span class="resource-picker-title">News</span> <i class="ico ico-16x8 ico-disclosure"></i></a>
+    <a define="{resourceDropdown: new Shopify.ResourceDropdown(this, 'home_articles_blog_partial_container')}" href="/admin/blogs/dropdown?resource_attribute=handle&amp;resource_key=home_articles_blog&amp;single_select=true" style="display: none" type="text/html"></a>
+    <a href="#" class="btn slim" data-dropdown="~ .dropdown" bind-event-click="resourceDropdown.renderDropdown(event)"><span class="resource-picker-title">News</span> <i class="ico ico-16x8 ico-disclosure"></i></a>
   </div>
-  <a bind-event-click="clearSelection(&#39;None&#39;)" class="btn btn-slim clear-search-selection tooltip tooltip-bottom" href="https://california-theme-generic.myshopify.com/admin/themes/11467879/settings#">
+  <a bind-event-click="clearSelection('None')" class="btn btn-slim clear-search-selection tooltip tooltip-bottom" href="#">
     <span class="tooltip-container">
       <span class="tooltip-label">Clear selection</span>
     </span>
@@ -548,7 +661,19 @@
     </tr>
   </tbody></table>
 </fieldset>
-<h2 class="heading section-expanded" data-heading="6">Header</h2>
+<h2 class="heading section-expanded" data-heading="6">Home Page Footer</h2>
+<fieldset class="">
+  
+  <table>
+    <tbody><tr>
+      <th><label for="home_footer_hidden">Hide footer at home page</label></th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][home_footer_hidden]" value="0"><input type="checkbox" id="home_footer_hidden" name="theme_settings[current_values][home_footer_hidden]" value="1">
+</td>
+    </tr>
+  </tbody></table>
+</fieldset>
+<h2 class="heading section-expanded" data-heading="7">Header</h2>
 <fieldset class="">
   
   <table>
@@ -584,9 +709,17 @@
 <input type="file" name="theme_settings[current_values][header-logo.png]" id="header_logo_image" data-max-height="66">
 <p>
   <i class="ico ico-16 ico-uploaded-file"></i>
-  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/header-logo.png?15467" target="_blank" bind-event-click="previewheaderlogopng.show()">header-logo.png</a>
+  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/header-logo.png?16728914975433133305" target="_blank" bind-event-click="previewheaderlogopng.show()">header-logo.png</a>
 </p>
 
+<script class="modal_source" define="{previewheaderlogopng: new Shopify.Modal(this)}" type="text/html">
+  <div class="body clearfix">
+    <img alt="Header logo" class="modal-image" src="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/header-logo.png?16728914975433133305" title="header-logo.png" />
+  </div>
+  <div class="buttons">
+    <a class="btn close-modal" href="#">Done</a>
+  </div>
+</script>
 </td>
     </tr>
     <tr>
@@ -662,11 +795,22 @@
     </tr>
   </tbody></table>
 </fieldset>
-<h2 class="heading section-expanded" data-heading="7">Footer</h2>
+<h2 class="heading section-expanded" data-heading="8">Footer</h2>
 <fieldset class="">
   
   <table>
     <tbody><tr>
+      <td colspan="2">
+        <h3 class="heading">Options</h3>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="footer_hidden">Remove footer from all pages</label></th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][footer_hidden]" value="0"><input type="checkbox" id="footer_hidden" name="theme_settings[current_values][footer_hidden]" value="1">
+</td>
+    </tr>
+    <tr>
       <td colspan="2">
         <h3 class="heading">Content</h3>
       </td>
@@ -674,9 +818,9 @@
     <tr>
       <th><label for="footer_first_menu_linklist">First column links list</label></th>
       <td colspan="2"><select class="linklist" name="theme_settings[current_values][footer_first_menu_linklist]" id="footer_first_menu_linklist"><option value="">None</option>
-<option value="featured-collections">Featured Collections</option>
-<option value="footer" selected="">Footer</option>
-<option value="main-menu">Main Menu</option></select></td>
+<option value="main-menu">Main Menu</option>
+<option value="footer" selected="">Navigate</option>
+<option value="theme-help">Theme Help</option></select></td>
     </tr>
     <tr>
       <td colspan="3">
@@ -688,10 +832,10 @@
         <label for="footer_second_menu_linklist">Second column links list</label>
         <small>The page will look nicer if you complete this.</small>
       </th>
-      <td colspan="2"><select class="linklist" name="theme_settings[current_values][footer_second_menu_linklist]" id="footer_second_menu_linklist"><option value="" selected="">None</option>
-<option value="featured-collections">Featured Collections</option>
-<option value="footer">Footer</option>
-<option value="main-menu">Main Menu</option></select></td>
+      <td colspan="2"><select class="linklist" name="theme_settings[current_values][footer_second_menu_linklist]" id="footer_second_menu_linklist"><option value="">None</option>
+<option value="main-menu">Main Menu</option>
+<option value="footer">Navigate</option>
+<option value="theme-help" selected="">Theme Help</option></select></td>
     </tr>
     <tr>
       <td colspan="3">
@@ -783,13 +927,12 @@
     <tr>
       <th><label for="footer_newsletter_enable">Show Newsletter Field</label></th>
       <td colspan="2">
-        <input type="hidden" name="theme_settings[current_values][footer_newsletter_enable]" value="0">
-        <input type="checkbox" id="footer_newsletter_enable" name="theme_settings[current_values][footer_newsletter_enable]" value="0">
+<input type="hidden" name="theme_settings[current_values][footer_newsletter_enable]" value="0"><input type="checkbox" id="footer_newsletter_enable" name="theme_settings[current_values][footer_newsletter_enable]" value="1" checked="">
 </td>
     </tr>
     <tr>
       <th><label for="newsletter_form_action">MailChimp Form Action URL</label></th>
-      <td><input type="text" id="newsletter_form_action" name="theme_settings[current_values][newsletter_form_action]" value=""></td>
+      <td><input type="text" id="newsletter_form_action" name="theme_settings[current_values][newsletter_form_action]" value="//myshopify.us4.list-manage.com/subscribe/post?u=3a74320779cd1a56969a7ddbb&amp;amp;id=c81e84a782"></td>
       <td><a href="http://docs.shopify.com/support/configuration/store-customization/where-do-i-get-my-mailchimp-form-action" target="_blank">Where do I find my MailChimp form action URL?</a></td>
     </tr>
     <tr>
@@ -844,15 +987,45 @@
       <th>
         <label for="color_footer_bg">Footer Background</label>
       </th>
-      <td><div class="minicolors minicolors-theme-default minicolors-position-bottom minicolors-position-left"><input id="color_footer_bg" name="theme_settings[current_values][color_footer_bg]" class="color js-color-picker minicolors-input" type="text" value="#4d4d4d" size="7"><span class="minicolors-swatch minicolors-sprite"><span class="minicolors-swatch-color" style="background-color: rgb(77, 77, 77);"></span></span><div class="minicolors-panel minicolors-slider-hue"><div class="minicolors-slider minicolors-sprite"><div class="minicolors-picker" style="top: 0px;"></div></div><div class="minicolors-opacity-slider minicolors-sprite"><div class="minicolors-picker"></div></div><div class="minicolors-grid minicolors-sprite" style="background-color: rgb(255, 0, 0);"><div class="minicolors-grid-inner"></div><div class="minicolors-picker" style="top: 104px; left: 0px;"><div></div></div></div></div></div></td>
+      <td><div class="minicolors minicolors-theme-default minicolors-position-bottom minicolors-position-left"><input id="color_footer_bg" name="theme_settings[current_values][color_footer_bg]" class="color js-color-picker minicolors-input" type="text" value="#3e4645" size="7"><span class="minicolors-swatch minicolors-sprite"><span class="minicolors-swatch-color" style="background-color: rgb(62, 70, 69);"></span></span><div class="minicolors-panel minicolors-slider-hue"><div class="minicolors-slider minicolors-sprite"><div class="minicolors-picker" style="top: 78.125px;"></div></div><div class="minicolors-opacity-slider minicolors-sprite"><div class="minicolors-picker"></div></div><div class="minicolors-grid minicolors-sprite" style="background-color: rgb(0, 255, 225);"><div class="minicolors-grid-inner"></div><div class="minicolors-picker" style="top: 108px; left: 18px;"><div></div></div></div></div></div></td>
     </tr>
   </tbody></table>
 </fieldset>
-<h2 class="heading section-expanded" data-heading="8">Product Pages</h2>
+<h2 class="heading section-expanded" data-heading="9">Product Pages</h2>
 <fieldset class="">
   
   <table>
     <tbody><tr>
+      <td colspan="2">
+        <h3 class="heading">Product Inventory</h3>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">Check <a href="http://docs.shopify.com/manual/your-store/products/track-inventory" target="_blank">this tutorial</a> to activate tracking on your product inventory.</td>
+    </tr>
+    <tr>
+      <th>
+        <label for="product_show_available_stock_units">Show available stock units on products</label>
+      </th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][product_show_available_stock_units]" value="0"><input type="checkbox" id="product_show_available_stock_units" name="theme_settings[current_values][product_show_available_stock_units]" value="1">
+</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <h3 class="heading">Product Checkout</h3>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="skip_cart_page">Skip the Cart Page</label>
+        <small>Goes straight to the Checkout Page</small>
+      </th>
+      <td colspan="2">
+<input type="hidden" name="theme_settings[current_values][skip_cart_page]" value="0"><input type="checkbox" id="skip_cart_page" name="theme_settings[current_values][skip_cart_page]" value="1">
+</td>
+    </tr>
+    <tr>
       <td colspan="3">
         <h3 class="heading">Social Media Share Buttons</h3>
       </td>
@@ -880,7 +1053,7 @@
     </tr>
   </tbody></table>
 </fieldset>
-<h2 class="heading section-expanded" data-heading="9">Collections</h2>
+<h2 class="heading section-expanded" data-heading="10">Collections</h2>
 <fieldset class="">
   
   <table>
@@ -911,7 +1084,7 @@
     </tr>
   </tbody></table>
 </fieldset>
-<h2 class="heading section-expanded" data-heading="10">Cart Page</h2>
+<h2 class="heading section-expanded" data-heading="11">Cart Page</h2>
 <fieldset class="">
   
   <table>
@@ -926,7 +1099,7 @@
     </tr>
   </tbody></table>
 </fieldset>
-<h2 class="heading section-expanded" data-heading="11">Checkout</h2>
+<h2 class="heading section-expanded" data-heading="12">Checkout</h2>
 <fieldset class="required_settings">
   
 
@@ -954,9 +1127,17 @@
         <input id="checkout_header_image.jpg" name="theme_settings[current_values][checkout_header_image.jpg]" type="file">
 <p>
   <i class="ico ico-16 ico-uploaded-file"></i>
-  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/checkout_header_image.jpg?15467" target="_blank" bind-event-click="previewcheckout_header_imagejpg.show()">checkout_header_image.jpg</a>
+  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/checkout_header_image.jpg?16728914975433133305" target="_blank" bind-event-click="previewcheckout_header_imagejpg.show()">checkout_header_image.jpg</a>
 </p>
 
+<script class="modal_source" define="{previewcheckout_header_imagejpg: new Shopify.Modal(this)}" type="text/html">
+  <div class="body clearfix">
+    <img alt="Checkout header image" class="modal-image" src="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/checkout_header_image.jpg?16728914975433133305" title="checkout_header_image.jpg" />
+  </div>
+  <div class="buttons">
+    <a class="btn close-modal" href="#">Done</a>
+  </div>
+</script>
       </td>
     </tr>
     <tr class="horizontal">
@@ -996,9 +1177,17 @@
         <input id="checkout_logo.png" name="theme_settings[current_values][checkout_logo.png]" type="file">
 <p>
   <i class="ico ico-16 ico-uploaded-file"></i>
-  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/checkout_logo.png?15467" target="_blank" bind-event-click="previewcheckout_logopng.show()">checkout_logo.png</a>
+  <a href="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/checkout_logo.png?16728914975433133305" target="_blank" bind-event-click="previewcheckout_logopng.show()">checkout_logo.png</a>
 </p>
 
+<script class="modal_source" define="{previewcheckout_logopng: new Shopify.Modal(this)}" type="text/html">
+  <div class="body clearfix">
+    <img alt="Checkout logo" class="modal-image" src="https://cdn.shopify.com/s/files/1/0669/6073/t/2/assets/checkout_logo.png?16728914975433133305" title="checkout_logo.png" />
+  </div>
+  <div class="buttons">
+    <a class="btn close-modal" href="#">Done</a>
+  </div>
+</script>
       </td>
     </tr>
     <tr class="horizontal">
@@ -1037,7 +1226,7 @@
     <tr class="horizontal">
       <th>
         <label for="checkout_call_to_action_color">Call to action</label>
-        <small>Changes the background color of the “Complete my purchase” button</small>
+        <small>Changes the background color of the “Place my order” button</small>
       </th>
       <td>
         <div class="minicolors minicolors-theme-default minicolors-position-bottom minicolors-position-left"><input id="checkout_call_to_action_color" name="theme_settings[current_values][checkout_call_to_action_color]" class="color js-color-picker minicolors-input" value="#8fc243" size="7"><span class="minicolors-swatch minicolors-sprite"><span class="minicolors-swatch-color" style="background-color: rgb(143, 194, 67);"></span></span><div class="minicolors-panel minicolors-slider-hue"><div class="minicolors-slider minicolors-sprite"><div class="minicolors-picker" style="top: 114.96062992126px;"></div></div><div class="minicolors-opacity-slider minicolors-sprite"><div class="minicolors-picker"></div></div><div class="minicolors-grid minicolors-sprite" style="background-color: rgb(153, 255, 0);"><div class="minicolors-grid-inner"></div><div class="minicolors-picker" style="top: 35px; left: 99px;"><div></div></div></div></div></div>
@@ -1045,7 +1234,7 @@
     </tr>
   </tbody></table>
 </fieldset>
-<h2 class="heading section-expanded" data-heading="11">Additional Layouts</h2>
+<h2 class="heading section-expanded" data-heading="13">Additional Layouts</h2>
 <fieldset class="required_setting">
   
   <table>
@@ -1056,7 +1245,7 @@
     </tr>
   </tbody></table>
 </fieldset>
-<input type="hidden" name="theme_settings[current_values][color_footer_links_hover]" value="#ffffff"><input type="hidden" name="theme_settings[current_values][palette_white]" value="#ffffff"><input type="hidden" name="theme_settings[current_values][palette_very_light]" value="#c1c1c1"><input type="hidden" name="theme_settings[current_values][palette_light]" value="#a1a1a1"><input type="hidden" name="theme_settings[current_values][palette_little_light]" value="#999999"><input type="hidden" name="theme_settings[current_values][palette_neutral]" value="#919191"><input type="hidden" name="theme_settings[current_values][palette_little_dark]" value="#818181"><input type="hidden" name="theme_settings[current_values][palette_dark]" value="#616161"><input type="hidden" name="theme_settings[current_values][palette_very_dark]" value="#313131"><input type="hidden" name="theme_settings[current_values][palette_black]" value="#000000"><input type="hidden" name="theme_settings[current_values][footer_display_first_menu]" value="true"><input type="hidden" name="theme_settings[current_values][name]" value="generic">
+<input type="hidden" name="theme_settings[current_values][name]" value="generic"><input type="hidden" name="theme_settings[current_values][color_footer_links_hover]" value="#ffffff"><input type="hidden" name="theme_settings[current_values][palette_white]" value="#ffffff"><input type="hidden" name="theme_settings[current_values][palette_very_light]" value="#c1c1c1"><input type="hidden" name="theme_settings[current_values][palette_light]" value="#a1a1a1"><input type="hidden" name="theme_settings[current_values][palette_little_light]" value="#999999"><input type="hidden" name="theme_settings[current_values][palette_neutral]" value="#919191"><input type="hidden" name="theme_settings[current_values][palette_little_dark]" value="#818181"><input type="hidden" name="theme_settings[current_values][palette_dark]" value="#616161"><input type="hidden" name="theme_settings[current_values][palette_very_dark]" value="#313131"><input type="hidden" name="theme_settings[current_values][palette_black]" value="#000000">
         </div>
       </div>
   </div>
