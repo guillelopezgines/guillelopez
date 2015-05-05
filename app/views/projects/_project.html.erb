@@ -11,7 +11,7 @@
     <p>
       <%= raw project.credit %> | 
       <% if project.url %>
-        <a class="online" href="<%= project.url %>"><span class="<%= project.status %>"><%= project.status %></span></a>
+        <a class="<%= project.status %>" href="<%= project.url %>" target="_blank"><span class="<%= project.status %>"><%= project.status %></span></a>
       <% else %>
         <span class="<%= project.status %>"><%= project.status %></span>
       <% end %>

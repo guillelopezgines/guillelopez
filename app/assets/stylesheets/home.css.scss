@@ -134,18 +134,19 @@ a:hover{
 
 .beta, a.beta{
   color: #0095FF;
+  border-color: #0095FF;
 }
 
-
-.secret{
+.secret, .paused{
   color: #EABE05;
 }
 
 .online, a.online{
   color: #00E811;
+  border-color: #00E811;
 }
 
-.documentation{
+.documentation, a.documentation{
   color: #00E811;
 }
 
