@@ -24,6 +24,9 @@ p {
   margin-bottom: 15px;
   max-width: 600px;
 }
+a {
+  color: rgb(0, 0, 238);
+}
 img {
   width: 100%;
   border: 0;
