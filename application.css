@@ -16,11 +16,21 @@ body {
 }
 #page {
   padding: 0px 30px 30px;
+  float: left;
+  width: 50%;
+
+}
+p {
+  margin-bottom: 15px;
   max-width: 600px;
+}
+img {
+  width: 100%;
+  border: 0;
 }
 #page .header {
   line-height: 15px;
-  margin: 25px 0 5px;
+  margin: 25px 0 10px;
   font-family: 'Montserrat';
   text-transform: uppercase;
   font-weight: 400;
@@ -30,8 +40,15 @@ body {
   line-height: 28px;
   color: #1c1d1d;
 }
-@media (max-width: 620px) {
+
+@media (max-width: 940px) {
   #page {
     padding: 0px 20px 30px;
+    max-width: 580px;
+    width: 100%;
+    float: none;
+  }
+  #page.right {
+    display: none;
   }
 }
